@@ -4,15 +4,17 @@ import boto3
 import requests
 import pandas as pd
 transcribe = boto3.client('transcribe',
-    aws_access_key_id='ASIA4FSAEHTGTI3LHWC5',
-    aws_secret_access_key='EEJxkvXkmLAhG27dp7EsEcHCz6wgEZEjryPKsKaG',
-    aws_session_token='FwoGZXIvYXdzEC8aDImZAvBfqelnVpvMrCLOAdHTEnafU2z/N2nc5tptapEkpwYWWY2WVqbt5wjZI5JHIIMb8c0sbk/fky/Q7LF88/uOwqum/l0rroRjI+tHN21sQYAh3nvrw8fv9UMOTSrD7cb76zMGGrgHzOyzjiAqksdHjOXpm9Yq6u5C9JhYQGRQUAJtAraN7InTNPD02xoIMi0JlSC0Bho2MJg1PfxGITmYOUtLxmP9IhJdqbxrT7yu28AOlBPqeBsOomnZd9yH2UKqpbdvGdHZxzNarUyBJxO/SJhIjjPXHLAVnuB0KLu9xYoGMi0wzUXvtzm0nxHM1U1jSfiJKXP5fzzclbjOfoOJjDj6dvnl9ipGtrztRXkw+Tk='
+    aws_access_key_id='ASIA4FSAEHTG7Y7V4P5B',
+    aws_secret_access_key='YqJLapISXHIyjcDK9oSdSz0hAJQlzrVcKvqgnnqH',
+    aws_session_token='FwoGZXIvYXdzEDEaDALxX55hg7fcBlm72iLOAQE7r9IyNvxpp8d1W0sz9ethfv/3Tmlybhwg37Hv7KEn9i5HFHNASSJsirM9XInkyMXg7+n5ZNSbYUUcbI9dk1vkS/yp7colPP1fzS0R87rdtH5hFzc2IX2bwoxqA9LAf+p986lfR17XmzfAPkuZT/SMiNngJMwSRGlIYonaBJClZEbEzzZY4BYFGfYWXJhqO+6F2YaJrIPNwceMuvF5Mtb9t5V4a+B9aaGmXY2iHwViJKn0vHrkEpeJmOStEZ2zaNG4/zCK+TMDJFrBQ7T1KKXuxYoGMi3FNyNBIYhHqfwpa8OcohFL9UzMNKR7srTPLbMBcbyebSOmzbjh1RaXvoFbXg4=',
+    region_name='us-east-1'
     )
+    
 s3 = boto3.resource('s3',
-    aws_access_key_id='ASIA4FSAEHTGTI3LHWC5',
-    aws_secret_access_key='EEJxkvXkmLAhG27dp7EsEcHCz6wgEZEjryPKsKaG',
-    aws_session_token='FwoGZXIvYXdzEC8aDImZAvBfqelnVpvMrCLOAdHTEnafU2z/N2nc5tptapEkpwYWWY2WVqbt5wjZI5JHIIMb8c0sbk/fky/Q7LF88/uOwqum/l0rroRjI+tHN21sQYAh3nvrw8fv9UMOTSrD7cb76zMGGrgHzOyzjiAqksdHjOXpm9Yq6u5C9JhYQGRQUAJtAraN7InTNPD02xoIMi0JlSC0Bho2MJg1PfxGITmYOUtLxmP9IhJdqbxrT7yu28AOlBPqeBsOomnZd9yH2UKqpbdvGdHZxzNarUyBJxO/SJhIjjPXHLAVnuB0KLu9xYoGMi0wzUXvtzm0nxHM1U1jSfiJKXP5fzzclbjOfoOJjDj6dvnl9ipGtrztRXkw+Tk='
-)
+    aws_access_key_id='ASIA4FSAEHTG7Y7V4P5B',
+    aws_secret_access_key='YqJLapISXHIyjcDK9oSdSz0hAJQlzrVcKvqgnnqH',
+    aws_session_token='FwoGZXIvYXdzEDEaDALxX55hg7fcBlm72iLOAQE7r9IyNvxpp8d1W0sz9ethfv/3Tmlybhwg37Hv7KEn9i5HFHNASSJsirM9XInkyMXg7+n5ZNSbYUUcbI9dk1vkS/yp7colPP1fzS0R87rdtH5hFzc2IX2bwoxqA9LAf+p986lfR17XmzfAPkuZT/SMiNngJMwSRGlIYonaBJClZEbEzzZY4BYFGfYWXJhqO+6F2YaJrIPNwceMuvF5Mtb9t5V4a+B9aaGmXY2iHwViJKn0vHrkEpeJmOStEZ2zaNG4/zCK+TMDJFrBQ7T1KKXuxYoGMi3FNyNBIYhHqfwpa8OcohFL9UzMNKR7srTPLbMBcbyebSOmzbjh1RaXvoFbXg4='
+    )
 bucket = s3.Bucket('transcribe-audio-is457')
 
 # Create trascriptions for all files in s3

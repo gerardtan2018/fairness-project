@@ -3,6 +3,8 @@ import time
 import boto3
 import requests
 import pandas as pd
+import json
+
 transcribe = boto3.client('transcribe',
     aws_access_key_id='ASIA4FSAEHTG7Y7V4P5B',
     aws_secret_access_key='YqJLapISXHIyjcDK9oSdSz0hAJQlzrVcKvqgnnqH',
@@ -18,15 +20,15 @@ s3 = boto3.resource('s3',
 bucket = s3.Bucket('transcribe-audio-is457')
 
 # Create trascriptions for all files in s3
-# for obj in bucket.objects.all():
-    # job_name = obj.key
-    # job_uri = f"s3://transcribe-audio-is457/{job_name}" 
-    # transcribe.start_transcription_job(
-    #     TranscriptionJobName=job_name,
-    #     Media={'MediaFileUri': job_uri},
-    #     MediaFormat='mp3',
-    #     LanguageCode='en-US'
-    # )
+for obj in bucket.objects.all():
+    job_name = obj.key
+    job_uri = f"s3://transcribe-audio-is457/{job_name}" 
+    transcribe.start_transcription_job(
+        TranscriptionJobName=job_name,
+        Media={'MediaFileUri': job_uri},
+        MediaFormat='mp3',
+        LanguageOptions=['en-US','en-AU', 'en-GB', 'en-IN', 'en-WL']
+    )
 
 
 # Retrieve results of all transcription jobs
@@ -35,6 +37,9 @@ for obj in bucket.objects.all():
     result = transcribe.get_transcription_job(TranscriptionJobName=job_name)
     URI = result['TranscriptionJob']['Transcript']['TranscriptFileUri']
     r = requests.get(URI).json()
+    filename = str(job_name.split(".")[0]) + "-result"
+    with open(filename, 'w') as f:
+        json.dump(r,f)
     file_name = r['jobName']
     transcript = r['results']['transcripts'][0]['transcript']
     print(file_name)

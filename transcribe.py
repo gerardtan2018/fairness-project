@@ -5,9 +5,9 @@ import requests
 import pandas as pd
 import json
 
-aws_access_key_id='ASIAZXDZAQL4QGQCEZ4P'
-aws_secret_access_key='9zboikyRkiSBSYtsQQwC41WsXOXeOgSRnZBRzJQd'
-aws_session_token='FwoGZXIvYXdzEJf//////////wEaDJjW6fjo8/M6aI6yFyLMAfdqghuQ/V1NbOmC8B+2eBt/HsnUNI8aSmUYC8Op4uIHmJmRgnOnenyujQ30Q5Ix4tqVEXgGxsmUeuMFSzIsTHPAwIFEDyPY3feUS+MVjunCV6BTVrWK0Rfq96NLTv67UibVsKRCqNa7zs84yNySwmzlew+Wf9436DS8oJysEyadX6qBYV65LHdE71yzKmR3TWaiYzBSj9qx2likkisuShJt9rxk0DnfjGgpNVYqWZHAB93QKUpBG3wN0MRkkxkDxgnD2oxXSeO+J79Y2Si5mdyKBjIt4CA6ZWhy6WCyo56vzqtTZaA7e2GzmIbzwQ6TylWZuxQiQaim3XRUD70tBWGW'
+aws_access_key_id='ASIAZXDZAQL4TUPGDXM6'
+aws_secret_access_key='fH9DyCdMDXEEA5zkZl72K2tmMklIbE0cldcLzGKJ'
+aws_session_token='FwoGZXIvYXdzEJr//////////wEaDHg+V58avfMRMT4fNSLMAU7Jm+GsPjfZ/Ne4AEo270zc92XAK7mpfdsP6zUSExoZP+E4vOlgMR/cTQ0dslJbwGFZ85tXuaD0g9ykCcZ9S8TiWjGP13nNrcIo3gEI6a2AzB5KGYCyvShePAJ7vQyGgMJmdDf8ry7yD66r4JbvgPbLXtzsXZAW+UBcOdu1+wt/fjIYCWQnP8ES67oimFvXSs4H5oJTLEZ1jmoQe+IHtEm6nH95vJvoOJnuvkQzjsDo5pk1Uw9+1VtPqaxsGCZq3h5bi/BiZ9M1wIQyuiiz89yKBjItB53u9AK3Er169WaEqpxlG6IqkL+hqC8MjcXonebw7p1YFiBnWyH0PN7KgzEp'
 
 transcribe = boto3.client('transcribe',
     aws_access_key_id=aws_access_key_id,
@@ -36,7 +36,7 @@ bucket = s3.Bucket('fairness-samples')
 #         transcribe.delete_transcription_job(TranscriptionJobName=job['TranscriptionJobName'])  
 
 # Create trascriptions for all files in s3
-for obj in bucket.objects.filter(Prefix='asian/'):
+for obj in bucket.objects.filter(Prefix='non_asian/'):
     job_name = obj.key.split('/')[-1]
     job_uri = "s3://fairness-samples/" + obj.key
     try: 

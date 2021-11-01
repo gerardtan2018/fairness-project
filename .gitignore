@@ -4,3 +4,4 @@ env/
 venv/
 .ipynb_checkpoints
 realtime-transcription-playground/node_modules/
+*/.ipynb_checkpoints

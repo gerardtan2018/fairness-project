@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fairness-asr",
+  "private_key_id": "8183e8421eee9a61e7927662ef0a79cc0b3d82a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCSSlDTzktSagIT\nB5rAr//B54G1HpeS4oWvb6x8+/XU8lORbMm6ynmbcjEDL4gDBulpjiC6bxp/cGvb\npoz1zepKVWdvi0txDQYMUf9oOhGEj0FNUyJt3s4+Ekjx47NTjuqYzfKqPnRF7DW0\nDaty2rI0zVuBAa0AFh80Lsk0N0as9XHpeAvpkbFDqhKdbQpomlUwKKCW5iMG7dy9\nQbEyNuzW9Qdjg2fVl44EZX9lKG4ptUrFkNOMLP/9GKyDSsJEmw0dwjdQR4NXsf+T\noI8h+qqNxj19vImzXFCpTOfx+B3iTAYl+OrHMnhJm6x5feFq8fznyMJI1k3U0FTD\n0S16+y0LAgMBAAECggEABsA33f5ddXkqOAHtf0o1Qu0nDC+pjlVhFp57AZgzA60H\nHuU7+KBoCjyzzFIriaWOV0Oqzk+wPln2xZUjA3je1f1Tn6R4SnLvvi55MIXK0dOL\n5OtFjHfFYWdAnIEF1oD4Ny2nLs9hAupf9BDUF6HGAC/LMuHb6kQbE90Q20BYb5og\n0CZC2OObR5PDRF0AgFc8KI3IrOkMSgT8vSUsekQuuRTYzXEosIniq3WVOnEYE6mJ\nJ0hrgKLECMureKFEa20XfT7//CRvZc373DeyzEmQwqcSINH38eUvyQZWkLvuio1b\ny2Vp1eYeadcYMJKt7nk8yGtHhs7Y0HRq8rsukeo8OQKBgQDM0DrKRe24AoTkVHjH\nRhDbi/pcJwHCeH+2hBBlTlOWn3wXbswbNmFp8UcDBBJ3kc6WNZoEYYXyC6AFHf9j\n2UpzvbyG2FWjnHAnyIi9id5aKXXQTueGhWDYkfYnQuh90YWQRy6ciAGYIBLpGssv\nqAnLmzJ9Eyy3MiO5TBbS5EyoBwKBgQC22dUkJCb+F41IAcWMd2dR/POsIIRQfvkT\nOR2FYm98CAzabmKHTsbQE2+wQ/8Xy6c1J/gnTrB6abHaPjWx72B93VB/XIMNyYe7\nrG6NV4XHpALS8AQYjONtoi1lJXfNVrrrS8w0ZzRZEcpG96M3voTvyI+dtuomQWU+\ng1BEF7Mp3QKBgQDJWpXRsjnow6E+kMVEs99y2ATEgBy8wZZdKyyrS/vlgtmOeAD1\nZ9sROoFjt6coIhKFniDS2cXDliY1oa4ozcDiVNB5iUl4Vh31HrNAE8Cjx0rqBgic\nOZhikez74E2NFGVI2JI8lYFru2yb+xlyurMWlndme2lkmUiBrQprPsMWFQKBgAl6\nTw75hL/k7qDN3rSCN+vLBcJlSRZ3DmgNrNcOHCM8s5Xa5OaIkcuVRlPHooBUQQ2D\nTdyTupgNxHdAhD39322GvDZt0Ck1ygBTVsOixr9rY+4VHNE89EjpgBrfD0+ocDXk\nDuikdNUtE+QLz/0CthdLuQ3+vjJPb3UHD3EIHXRNAoGAWptwi2fW75fsWfVOL//X\nUao7FVdaWR6qs03rimF++1XzYZUzOufBb1fRdvtQAcHG2PXfuLEvIilLAS9RitNa\nRG00wpU1RrtsYiAK4kDnTscHzSLhphspaUaVDHWpelIL2aAihoqB7LOv+mUU0o3+\nFQYFkxQ0yKjFpybqkRqZvGs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "fairness-asr@fairness-asr.iam.gserviceaccount.com",
+  "client_id": "101978367254876535186",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fairness-asr%40fairness-asr.iam.gserviceaccount.com"
+}

@@ -1,4 +1,4 @@
-## Setting up poetry
+## Setting up poetry environment
 Install [poetry](https://python-poetry.org/docs/#installation) then run
 
 ```
